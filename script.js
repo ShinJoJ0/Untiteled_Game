@@ -56,7 +56,7 @@ function startTimer() {
   startTime = new Date();
   timerInterval = setInterval(() => {
     const elapsed = Math.floor((new Date() - startTime) / 1000);
-    timer.textContent = `⏱️ Tiempo: ${elapsed}s`;
+    timer.textContent = `⏱️ Time: ${elapsed}s`;
   }, 1000);
 }
 
@@ -146,7 +146,7 @@ function loadQuestion() {
   
   // Actualizar estado de los botones de navegación
   prevBtn.disabled = currentQuestion === 0;
-  nextBtn.textContent = currentQuestion === filteredQuestions.length - 1 ? "Finalizar 🏁" : "Siguiente ➡️";
+  nextBtn.textContent = currentQuestion === filteredQuestions.length - 1 ? "End 🏁" : "Next ➡️";
   
   // Barajar opciones de respuesta
   const shuffledOptions = [...q.options].sort(() => 0.5 - Math.random());
