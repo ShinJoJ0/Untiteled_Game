@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparative & Superlative Doors Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="celebration" id="celebration"></div>
+  <div id="online-status" class="online-status offline">🔴 Offline</div>
+  
+  <h1>🚪 Comparative and Superlative Doors</h1>
+  
+  <div class="game-container">
+    <!-- Configuración del jugador (solo online) -->
+    <div id="player-setup" class="player-setup hidden">
+      <label for="player-name">👤 Your name:</label>
+      <input type="text" id="player-name" placeholder="Enter your name" maxlength="20">
+      <button id="save-name-btn">✅ Save</button>
+    </div>
+    
+    <!-- Estadísticas del juego -->
+    <div class="stats-container">
+      <div class="stat">🏆 Points: <span id="score">0</span></div>
+      <div class="stat">❤️ Lives: <span id="lives">3</span></div>
+      <div class="streak">🔥 Streak: <span id="streak">0</span></div>
+      <div class="stat">⭐ Perfects: <span id="perfect">0</span></div>
+    </div>
+    
+    <!-- Barra de progreso -->
+    <div class="progress-container">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    <div class="progress-text" id="progress-text"></div>
+    
+    <!-- Selectores de dificultad y categoría -->
+    <div class="difficulty-selector" id="difficulty-selector">
+      <button class="difficulty-btn active" data-difficulty="all">All</button>
+      <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+      <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+      <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+    </div>
+    
+    <div class="category-selector" id="category-selector">
+      <button class="category-btn active" data-category="all">All</button>
+      <button class="category-btn" data-category="comparative">Comparatives</button>
+      <button class="category-btn" data-category="superlative">Superlatives</button>
+    </div>
+    
+    <!-- Contenedor de preguntas y respuestas -->
+    <div id="question-container" class="question"></div>
+    <div class="hint" id="hint"></div>
+    <div class="doors" id="doors-container"></div>
+    <div class="feedback" id="feedback"></div>
+    <div class="explanation" id="explanation"></div>
+    
+    <!-- Controles del juego -->
+    <div class="controls">
+      <button id="prev-btn" disabled>⬅️ Previous</button>
+      <button id="hint-btn">💡 Hint</button>
+      <button id="skip-btn">⏭️ Skip</button>
+      <button id="next-btn">Next ➡️</button>
+      <button id="leaderboard-btn" class="hidden">🏆 Ranking</button>
+    </div>
+    
+    <!-- Temporizador -->
+    <div class="timer" id="timer">⏱️ Time: 0s</div>
+    
+    <!-- Resumen final -->
+    <div id="summary" class="summary hidden">
+      <button id="restart-btn">🔄 Play Again</button>
+    </div>
+  </div>
+
+  <!-- Carga de scripts -->
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
